@@ -10,3 +10,23 @@ body{
 .banner {
     height: 50em;
 }
+
+.intro {
+    display: flex;
+    height: 25em;
+}
+
+.intro-1st-half{
+    width:50%;
+}
+
+.intro-1st-half > h2 {
+    font-size: 5em;
+}
+.intro-1st-half > p {
+    font-size: 3em;
+}
+
+.intro-2nd-half {
+    width: 50%;
+}
