@@ -8,12 +8,13 @@ body{
 }
 
 .banner {
-    height: 50em;
+    height: 35em;
 }
 
 .intro {
     display: flex;
-    height: 25em;
+    height: 35em;
+    overflow: hidden;
 }
 
 .intro-1st-half{
@@ -29,4 +30,9 @@ body{
 
 .intro-2nd-half {
     width: 50%;
+}
+
+.quotes > div > h2 {
+    text-align: center;
+
 }
