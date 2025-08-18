@@ -2,6 +2,10 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.banner-with-text {
+    padding-bottom: 50px;
+}
+
 .h1-name {
     text-align: center;
     font-size: 8em;
