@@ -4,6 +4,7 @@ import Intro from "./components/Intro.jsx";
 import Carousel from "./components/Carousel.jsx";
 import Footer from "./components/Footer.jsx";
 import React from "react";
+import Divider from "./components/Divider";
 
 
 export default function App() {
@@ -11,7 +12,9 @@ export default function App() {
     <>
       <Navbar />
       <Banner />
+      <Divider />
       <Intro />
+      <Divider />
       <Carousel />
       <Footer />
     </>
