@@ -11,12 +11,6 @@
 @layer base {
 }
 
-:root {
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --carousel-width: 30rem;
-}
 
 body {
   font-family: "Inter", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -24,139 +18,10 @@ body {
   line-height: 1.5;        /* clean spacing for tech content */
   font-weight: 400;        /* normal weight for body text */
   color: #111;             /* dark but not harsh black */
+    background: black;
   -webkit-font-smoothing: antialiased;  /* smoother text on Mac/WebKit browsers */
   -moz-osx-font-smoothing: grayscale;   /* smoother text on Firefox/macOS */
 }
 
-/* CTA Button */
-.btn-primary {
-  padding: 0.5rem 1.5rem;
-  background: linear-gradient(90deg, #00ffff, #0077ff);
-  border: none;
-  border-radius: 4px;
-  color: #0f0f0f;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.4);
-}
 
 
-
-.banner-with-text {
-    padding-top:2.5rem;
-    padding-bottom: 3rem;
-
-}
-
-
-.h1-name {
-    text-align: center;
-    font-size: 8rem;
-}
-
-.banner {
-    height: 36rem;
-}
-
-.intro {
-    display: flex;
-    height: 36rem;
-    overflow: hidden;
-    padding-top:3rem;
-    padding-bottom:6rem;
-}
-
-.intro-1st-half{
-    width:50%;
-}
-
-.intro-1st-half > h2 {
-    font-size: 6rem;
-}
-.intro-1st-half > p {
-    font-size: 3rem;
-}
-
-.intro-2nd-half {
-    width: 24rem;
-    height: auto;
-}
-
-.quotes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top:1.5rem;
-    padding-bottom: 6rem;
-
-}
-
-.quotes > div > h2 {
-    padding-top:12rem;
-    margin-bottom: 3rem;
-    
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  background-color: #111111;        /* matches navbar */
-  border-top: 1px solid #222;       /* top border instead of bottom */
-  position: fixed;
-  width: 100%;
-  bottom: 0;                        /* stick to bottom */
-  left: 0;
-  z-index: 1000;
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-.footer a {
-  color: #ccc;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  transition: color 0.3s;
-}
-
-.footer a:hover {
-  color: #fff;
-}
-
-.footer-left p {
-  margin: 0;
-}
-
-
-
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 2rem;
-  }
-
-  .navbar__menu ul {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .navbar__cta {
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  .btn-primary {
-    width: 100%;
-    text-align: center;
-  }
-}

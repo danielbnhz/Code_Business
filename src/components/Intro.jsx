@@ -3,14 +3,14 @@ import React from "react";
 
 export default function Intro() {
     return (
-        <section className="py-28 grid grid-cols-1 md:grid-cols-2 min-h-[70vh] items-center">
+        <section className="py-28 bg-black grid grid-cols-1 md:grid-cols-2 min-h-[70vh] items-center">
             {/* Left Section */}
             <div className="px-6 py-12 flex flex-col justify-between h-full">
                 <div>
-                    <h1 className="text-5xl font-bold mb-4 tracking-tight">
+                    <h1 className="text-5xl text-gray-50 font-bold mb-4 tracking-tight">
                         We are Code Business
                     </h1>
-                    <p className="text-lg text-gray-600 mb-6 max-w-md">
+                    <p className="text-lg text-gray-200 mb-6 max-w-md">
                         We build projects that explore technology, design, and resilience.
                     </p>
                 </div>
