@@ -5,6 +5,7 @@ import Carousel from "./components/Carousel.jsx";
 import Footer from "./components/Footer.jsx";
 import React from "react";
 import Divider from "./components/Divider";
+import FourCardSection from "./components/FourCardSection";
 
 
 export default function App() {
@@ -16,7 +17,10 @@ export default function App() {
       <Intro />
       <Divider />
       <Carousel />
+      <Divider />
+      <FourCardSection />
       <Footer />
+
     </>
   );
 }
