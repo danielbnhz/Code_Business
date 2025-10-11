@@ -2,3 +2,7 @@
 
 
 _It is still currently in construction_ 🚧🚧
+
+
+The goal is to display what I can code in webpage coding. It emulates a software company and the type of functioning
+they may include in a webpage to market their services. 

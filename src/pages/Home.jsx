@@ -6,6 +6,7 @@ import Footer from "../components/Footer.jsx";
 import React from "react";
 import Divider from "../components/Divider";
 import FourCardSection from "../components/FourCardSection";
+import Banner_2 from "../components/Banner_2.jsx";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Carousel />
       <Divider />
       <FourCardSection />
+      <Banner_2 />
       <Footer />
 
     </>
