@@ -11,7 +11,17 @@ export default function Intro() {
                         We are Code Business
                     </h1>
                     <p className="text-lg text-gray-200 mb-6 max-w-md">
-                        We build projects that explore technology, design, and resilience.
+                        We build projects that explore technology, design, and resilience. Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. Duis id felis a orci eleifend sollicitudin aliquet in eros. 
+                        Aliquam suscipit volutpat nisl et elementum. Cras iaculis imperdiet congue. Cras ultricies est neque. 
+
+                    </p>
+                    <p className="text-lg text-gray-200 mb-6 max-w-md">
+
+                                            Sed at lacinia nibh. Maecenas in sagittis nisl, eu gravida metus. Mauris sed mattis lectus, eu malesuada ipsum. 
+                        Fusce a rhoncus nibh. Suspendisse tellus felis, sollicitudin ut lorem non, fermentum dapibus mi. Aenean felis ligula,
+                         viverra id purus non, euismod suscipit massa. Vestibulum metus lorem, interdum id accumsan nec, sodales posuere lacus.
+                          In non ornare risus, auctor cursus est.
                     </p>
                 </div>
 

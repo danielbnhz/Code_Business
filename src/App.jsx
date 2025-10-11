@@ -1,26 +1,15 @@
-import Navbar from "./components/Navbar.jsx";
-import Banner from "./components/Banner.jsx";
-import Intro from "./components/Intro.jsx";
-import Carousel from "./components/Carousel.jsx";
-import Footer from "./components/Footer.jsx";
 import React from "react";
-import Divider from "./components/Divider";
-import FourCardSection from "./components/FourCardSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx"; 
 
-
-export default function App() {
+function App() {
   return (
-    <>
-      <Navbar />
-      <Banner />
-      <Divider />
-      <Intro />
-      <Divider />
-      <Carousel />
-      <Divider />
-      <FourCardSection />
-      <Footer />
-
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;
