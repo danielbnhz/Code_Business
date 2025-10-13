@@ -5,6 +5,7 @@ node_modules/
 dist/
 
 # local env files
+.vite/
 .env
 .env.local
 .env.*.local
@@ -18,3 +19,13 @@ yarn-error.log*
 .DS_Store
 .vscode/
 .idea/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+*.pyo
+*.pyd
+*.db
+*.sqlite3
