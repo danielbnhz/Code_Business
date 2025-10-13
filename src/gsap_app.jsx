@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function GsapApp() {
   useEffect(() => {
-    // Your existing GSAP code
     gsap.from(".banner-with-text", { opacity: 0, duration: 1 });
 
     gsap.from(".stagger-item", {
@@ -32,8 +31,7 @@ export default function GsapApp() {
       ease: "power2.out"
     });
 
-  }, []); // run once when component mounts
-
+  }, []); 
   return (
     <div>
       <section className="intro">
