@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import random
 
+
 app = FastAPI()
 
 app.add_middleware(
@@ -44,3 +45,16 @@ async def startup_event():
 @app.get("/api/random_metrics_continuous")
 def get_metrics():
     return metrics
+
+current_y = 0
+step = 0.1
+max_y = .5
+
+@app.get("/graph_data")
+def graph_data():
+    global current_y, step, max_y
+    current_y += step
+    if current_y > max_y:
+        current_y = 0
+
+    return {"x": [current_y], "y": [current_y]}
