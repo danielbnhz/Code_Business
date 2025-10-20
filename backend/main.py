@@ -2,7 +2,7 @@ import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import random
-
+from metrics2 import get_2nd_metrics
 
 app = FastAPI()
 
@@ -19,6 +19,10 @@ metrics = {
     "tasks_completed": 500,
     "revenue": 25000
 }
+@app.get("/metric2")
+
+def metrics2():
+    return get_2nd_metrics()
 
 def random_metrics_continuous(prev_metrics):
     new_metrics = {}

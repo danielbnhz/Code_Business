@@ -5,6 +5,7 @@ import MetricsPrimer from "../components/MetricsPrimer.jsx";
 import Statistics from "../components/Statistics.jsx";
 import Banner_3 from "../components/banner_3.jsx";
 import PlotVisual from "../components/PlotVisual.jsx"
+import BarGraph from "../components/BarGraph.jsx";
 
 export default function Services() {
 
@@ -15,6 +16,7 @@ export default function Services() {
     <MetricsPrimer />
     <Statistics />
     <PlotVisual />
+    <BarGraph />
     <Footer />
     </>
   );
