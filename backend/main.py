@@ -19,7 +19,7 @@ metrics = {
     "tasks_completed": 500,
     "revenue": 25000
 }
-@app.get("/metric2")
+@app.get("/get_2nd_metrics")
 
 def metrics2():
     return get_2nd_metrics()

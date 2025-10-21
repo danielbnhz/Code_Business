@@ -2,8 +2,12 @@
 from fastapi import APIRouter
 import random
 from datetime import datetime
+from fastapi import FastAPI
 
 
+app = FastAPI()
+
+@app.get("/get_2nd_metrics")
 def get_2nd_metrics():
     return {
         "timestamp": datetime.now().isoformat(),
