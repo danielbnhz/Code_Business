@@ -37,6 +37,8 @@ function PlotVisual() {
           height: 400,  // set a fixed height
           margin: { t: 20, b: 40, l: 50, r: 20 }
         }}
+          config={{ displayModeBar: false }}
+        
       />
     </div>
 

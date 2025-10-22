@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 const RANGES = {
   cpu_load: [0, 100],
   memory_usage: [0, 100],
-  disk_io: [0, 900],        // adjust to expected maxs
+  disk_io: [0, 900],        
   network_speed: [0, 1000],
 };
 
@@ -40,7 +40,7 @@ export default function Services() {
     <MetricsPrimer />
     <Statistics />
     <PlotVisual />
-    <div className="flex gap-4 pb-24">
+    <div className="flex gap-4 pb-24 justify-center items-end space-x-4">
 
       <BarGraph metricKey="cpu_load" value={metrics.cpu_load} ranges={RANGES}/>
       <BarGraph metricKey="memory_usage" value={metrics.memory_usage} ranges={RANGES}/>

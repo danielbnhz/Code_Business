@@ -3,8 +3,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import random
 from metrics2 import get_2nd_metrics
+import subprocess
+
 
 app = FastAPI()
+
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -62,3 +66,13 @@ def graph_data():
         current_y = 0
 
     return {"x": [current_y], "y": [current_y]}
+
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    try:
+        # Forcefully kill all python processes
+        subprocess.run(["taskkill", "/f", "/im", "python.exe"], check=True)
+        print("All Python processes killed.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error killing Python processes: {e}")

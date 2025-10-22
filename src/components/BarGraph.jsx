@@ -11,55 +11,36 @@ const mapRange = (value, inMin, inMax, outMin = 0, outMax = 100) => {
   return outMin + clamp(norm, 0, 1) * (outMax - outMin);
 };
 
-/**
- * Example usage: pass an object with metrics and optionally min/max ranges per metric.
- */
+
 export default function MetricBar({ metricKey = "cpu_load", value = 0, ranges }) {
-  // ranges: { cpu_load: [0,100], disk_io: [0,1000], network_speed: [0,2000] }
-  const barRef = useRef(null);
+  const [pct, setPct] = useState(0);
 
   useEffect(() => {
-    // decide input range and map to percentage 0..1 for scaleY
     const [inMin, inMax] = (ranges && ranges[metricKey]) || [0, 100];
-
-    // map to 0..100 percent
-    const pct = mapRange(value, inMin, inMax, 0, 100);
-
-    // convert pct to scaleY (0..1)
-    const scaleY = pct / 100;
-
-    // animate using transform (origin: bottom)
-    gsap.killTweensOf(barRef.current);
-    gsap.set(barRef.current, { transformOrigin: "bottom center" });
-
-    // animate up and then back down (yoyo)
-    gsap.to(barRef.current, {
-      scaleY,
-      duration: 1.2,
-      ease: "power2.out",
-      repeat: 1,       // play forward then repeat once
-      yoyo: true,      // reverse on repeat
-      repeatDelay: 1,  // wait 1s at top before returning
-    });
+    const mapped = mapRange(value, inMin, inMax, 0, 100);
+    setPct(mapped);
   }, [value, metricKey, ranges]);
 
   return (
-    <div className="w-20 flex flex-col items-center text-white">
+    <div className="w-20 flex flex-col items-center text-white pt-22">
+      {/* Outer container */}
       <div className="h-48 w-full bg-gray-800 rounded-xl overflow-hidden flex items-end">
-        {/* inner bar: initial scaleY 0 */}
+        {/* Inner bar */}
         <div
-          ref={barRef}
-          className="w-full rounded-t-xl"
+          className="w-full rounded-t-xl transition-all duration-500 ease-out"
           style={{
-            background: "linear-gradient(180deg,#34d399,#10b981)",
-            transform: "scaleY(0)", // start collapsed
+            height: `${pct}%`,
+            background: "linear-gradient(180deg, #34d399, #10b981)",
           }}
         />
       </div>
-      <div className="mt-2 text-xs text-center">
-        <div>{metricKey.replace(/_/g, " ")}</div>
+
+      {/* Labels */}
+      {/* Consistent text block with fixed height */}
+      <div className="h-10 mt-2 text-xs text-center flex flex-col justify-center">
+        <div className="truncate w-full">{metricKey.replace(/_/g, " ")}</div>
         <div className="text-sm">{Math.round(value)}</div>
       </div>
-    </div>
+  </div>
   );
 }
