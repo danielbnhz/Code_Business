@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import QuoteCard from "../components/QuoteCard";
 import Footer from "../components/Footer";
 import Disclaimer from "../components/Disclaimer";
+import PartnershipsHeader from "../components/PartnershipsHeader";
+import Divider from "../components/Divider"
 
 const testimonials = [
   {
@@ -52,6 +54,8 @@ export default function Testimonials() {
         ))}
       </div>
       {/* <div> */}
+      <PartnershipsHeader />
+      <Divider />
       <img
         src="/images/fictional_brands.png"
         alt="Logos of fictional companies"
@@ -59,6 +63,9 @@ export default function Testimonials() {
       />
 
       {/* </div> */}
+      
+
+
       <Disclaimer />
 
       <Footer />
