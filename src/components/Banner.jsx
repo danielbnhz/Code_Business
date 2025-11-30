@@ -16,7 +16,7 @@ export default function Banner() {
             <div className="relative w-full h-[36rem]">
                 <img
                     src="/images/code.jpg"
-                    alt="computer programming"
+                    alt="highly condensed computer code"
                     className="w-full h-full object-cover opacity-90"
                 />
                 {/* subtle gradient fade for drama */}

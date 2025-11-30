@@ -13,7 +13,7 @@ export default function Banner_2() {
             <div className="relative w-full h-[36rem]">
                 <img
                     src="/images/banner_2.jpg"
-                    alt="computer programming"
+                    alt="computer code on a desktop screen"
                     className="w-full h-full object-cover opacity-90"
                 />
                 {/* subtle gradient fade for drama */}

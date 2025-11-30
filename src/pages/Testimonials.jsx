@@ -1,5 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import QuoteCard from "../components/QuoteCard";
+import Footer from "../components/Footer";
+import Disclaimer from "../components/Disclaimer";
 
 const testimonials = [
   {
@@ -26,12 +29,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    
     <div className="bg-black text-white min-h-screen py-16 px-6">
-         <Navbar />
+      <Navbar />
 
       <div className="max-w-5xl mx-auto text-center mb-12 py-14">
-
         <h1 className="text-4xl font-bold mb-4" style={{ color: "#00ffff" }}>
           Testimonials
         </h1>
@@ -40,18 +41,27 @@ export default function Testimonials() {
         </p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
         {testimonials.map((t, index) => (
-          <div
+          <QuoteCard
             key={index}
-            className="bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-          >
-            <p className="text-white italic mb-4">&ldquo;{t.quote}&rdquo;</p>
-            <p className="font-semibold text-blue-600">{t.name}</p>
-            <p className="text-sm text-gray-400">{t.title}</p>
-          </div>
+            name={t.name}
+            title={t.title}
+            quote={t.quote}
+          />
         ))}
       </div>
+      {/* <div> */}
+      <img
+        src="/images/fictional_brands.png"
+        alt="Logos of fictional companies"
+        className="mx-auto w-460 h-400"
+      />
+
+      {/* </div> */}
+      <Disclaimer />
+
+      <Footer />
     </div>
   );
 }
