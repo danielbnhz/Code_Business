@@ -10,6 +10,8 @@ export default function Navbar() {
               <li><Link to="/" className="text-white font-medium hover:text-[#00ffff] transition-colors">Home</Link></li>
               <li><Link to="/Services" className="text-white font-medium hover:text-[#00ffff] transition-colors">Services</Link></li>
               <li><Link to="/Contact" className="text-white font-medium hover:text-[#00ffff] transition-colors">Contact</Link></li>
+              <li><Link to="/Testimonials" className="text-white font-medium hover:text-[#00ffff] transition-colors">Testimonials</Link></li>
+
           </ul>
           <button className="px-6 py-2 rounded bg-gradient-to-r from-[#00ffff] to-blue-600 text-[#0f0f0f] font-semibold hover:-translate-y-0.5 hover:shadow-lg transition transform">
               Hire Us
