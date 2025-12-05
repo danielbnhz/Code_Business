@@ -23,7 +23,9 @@ export default function Services() {
 
   useEffect(() => {
     const fetchMetrics = async () => {
-      const res = await fetch("http://localhost:8000/get_2nd_metrics");
+      const API_BASE = import.meta.env.VITE_API_URL;
+
+      const res = await fetch(`${API_BASE}/get_2nd_metrics`);
       const json = await res.json();
       setMetrics(json);
     };

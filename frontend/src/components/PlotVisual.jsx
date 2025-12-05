@@ -7,10 +7,12 @@ function PlotVisual() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch("http://127.0.0.1:8000/graph_data")
+      const API_BASE = import.meta.env.VITE_API_URL;
+
+      fetch(`${API_BASE}/graph_data`)
         .then(res => res.json())
         .then(json => setData(json));
-    }, 250); // refresh every 100ms
+    }, 250); // refresh every 250ms
 
     return () => clearInterval(interval);
   }, []);

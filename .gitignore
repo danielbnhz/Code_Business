@@ -29,3 +29,8 @@ venv/
 *.pyd
 *.db
 *.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
