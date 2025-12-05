@@ -14,8 +14,8 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message!");
+    console.log("Form will go nowhere:", formData);
+    alert("Thank you for your message but this form isn't programmed to send the form anywhere!");
     setFormData({ name: "", email: "", message: "" });
   };
 

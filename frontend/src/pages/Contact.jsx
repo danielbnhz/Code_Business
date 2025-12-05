@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 import EmailImage from "../../images/EmailImage.jpg"; 
+import Disclaimer_2 from "../components/Disclaimer_2.jsx";
+import Divider from "../components/Divider.jsx";
 
 export default function Contact() {
   return (
@@ -25,6 +27,9 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    <Divider />
+    <Disclaimer_2 />
+    <Divider />
     <Footer />
     </>
   );
