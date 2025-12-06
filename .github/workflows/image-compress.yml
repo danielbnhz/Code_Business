@@ -1,24 +1,24 @@
 name: Compress Images
 
-# Run this workflow whenever pushed to any branch
 on:
   push:
-    paths:
-      - 'frontend/src/assets/**/*.{png,jpg,jpeg}'
+    branches:
+      - working
+    # paths:
+    #   - 'frontend/images/**/*.{png,jpg,jpeg,webp,avif}'
 
 jobs:
   compress-images:
     runs-on: ubuntu-latest
-
     steps:
-      
       - name: Checkout repo
         uses: actions/checkout@v3
 
-     
       - name: Compress images
-        uses: tj-actions/compress-images@v4
+        uses: calibreapp/image-actions@main
         with:
-          compress-level: 80  # adjust 0–100 quality (higher = better quality, larger size)
-          include: 'frontend/src/assets/**/*.{png,jpg,jpeg}'
-          exclude: ''          
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          # optional settings:
+          jpegQuality: '85'
+          pngQuality: '80'
+          webpQuality: '80'
