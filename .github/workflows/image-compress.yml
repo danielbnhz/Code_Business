@@ -1,24 +1,20 @@
 name: Compress Images
 
-# Run this workflow whenever pushed to any branch
 on:
   push:
     branches:
-      - working  # trigger on any push to working branch
-      
-jobs:
-  compress-images:
-    runs-on: ubuntu-latest
+      - working  # triggers on any push to working
 
+jobs:
+  compress:
+    runs-on: ubuntu-latest
     steps:
-      
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-     
       - name: Compress images
-        uses: tj-actions/compress-images@v4
+        uses: mozey/compress-images@v1
         with:
-          compress-level: 80  # adjust 0–100 quality (higher = better quality, larger size)
-          include: 'frontend/src/assets/**/*.{png,jpg,jpeg}'
-          exclude: ''          
+          source: 'frontend/images'   # folder containing images
+          destination: 'frontend/images'  # overwrite same folder
+          quality: 75                      # adjust quality as needed
