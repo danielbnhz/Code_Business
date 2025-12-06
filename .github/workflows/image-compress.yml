@@ -3,9 +3,9 @@ name: Compress Images
 # Run this workflow whenever pushed to any branch
 on:
   push:
-    paths:
-      - 'frontend/src/assets/**/*.{png,jpg,jpeg}'
-
+    branches:
+      - working  # trigger on any push to working branch
+      
 jobs:
   compress-images:
     runs-on: ubuntu-latest
