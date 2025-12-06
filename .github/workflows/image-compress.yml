@@ -3,18 +3,22 @@ name: Compress Images
 on:
   push:
     branches:
-      - working  # triggers on any push to working
+      - working
+    paths:
+      - 'frontend/images/**/*.{png,jpg,jpeg,webp,avif}'
 
 jobs:
-  compress:
+  compress-images:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Compress images
-        uses: mozey/compress-images@v1
+        uses: calibreapp/image-actions@main
         with:
-          source: 'frontend/images'   # folder containing images
-          destination: 'frontend/images'  # overwrite same folder
-          quality: 75                      # adjust quality as needed
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          # optional settings:
+          jpegQuality: '85'
+          pngQuality: '80'
+          webpQuality: '80'
