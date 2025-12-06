@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - working
-    paths:
-      - 'frontend/images/**/*.{png,jpg,jpeg,webp,avif}'
+    # paths:
+    #   - 'frontend/images/**/*.{png,jpg,jpeg,webp,avif}'
 
 jobs:
   compress-images:
