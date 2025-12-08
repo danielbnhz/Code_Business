@@ -9,8 +9,9 @@ import subprocess
 app = FastAPI()
 
 origins = [
-    "https://daniel-portfolio.me",
-    "http://localhost:5173"
+    "https://business.daniel-portfolio.me",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
 ]
 
 # app.mount("/", StaticFiles(directory="dist", html=True), name="static")
@@ -19,6 +20,7 @@ origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,  # frontend URL
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
 )
