@@ -8,11 +8,14 @@ import subprocess
 
 app = FastAPI()
 
-
+origins = [
+    "https://daniel-portfolio.me",
+    "http://localhost:5173"
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://business.daniel-portfolio.me"],  # frontend URL
+    allow_origins=origins,  # frontend URL
     allow_methods=["*"],
     allow_headers=["*"]
 )
