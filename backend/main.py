@@ -13,7 +13,7 @@ origins = [
     "http://localhost:5173"
 ]
 
-app.mount("/", StaticFiles(directory="dist", html=True), name="static")
+# app.mount("/", StaticFiles(directory="dist", html=True), name="static")
 
 
 app.add_middleware(
