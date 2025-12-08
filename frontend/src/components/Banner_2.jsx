@@ -1,5 +1,5 @@
 import React from "react";
-import computer_code from "../images/banner_2.jpg";
+import computer_code from "../images/Banner_2.jpg";
 
 export default function Banner_2() {
     return (
