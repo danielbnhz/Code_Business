@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.png"; 
-
+import logo from "../images/logo.png"
+ 
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-12 py-4 bg-black border-b border-[#222]">

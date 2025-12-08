@@ -2,9 +2,9 @@ import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import ContactForm from "../components/ContactForm.jsx";
-import EmailImage from "../../images/EmailImage.jpg"; 
 import Disclaimer_2 from "../components/Disclaimer_2.jsx";
 import Divider from "../components/Divider.jsx";
+import email_img from "../images/EmailImage.jpg";
 
 export default function Contact() {
   return (
@@ -15,7 +15,7 @@ export default function Contact() {
         {/* Left side: Image */}
         <div className="md:w-1/2 flex justify-center items-center">
           <img
-            src={EmailImage}
+            src={email_img}
             alt="Decorative"
             className="rounded-xl object-cover w-full h-full max-h-[500px]"
           />

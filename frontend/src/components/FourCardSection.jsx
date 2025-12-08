@@ -1,27 +1,31 @@
 
 import React from "react";
+import web_img from "../images/internets.jpg";
+import app_img from "../images/apps.jpg";
+import ai_img from "../images/neural_net.jpg";
+import ui_img from "../images/wireframes_pic.jpg";
 
 export default function FourCardSection() {
     const cards = [
         {
             title: "Web Development",
             description: "Custom websites built for speed and reliability.",
-            image: "/images/internets.jpg"
+            image: web_img
         },
         {
             title: "App Development",
             description: "Mobile and desktop apps that delight users.",
-            image: "/images/apps.jpg"
+            image: app_img
         },
         {
             title: "AI Integration",
             description: "Add intelligence to your products seamlessly.",
-            image: "/images/neural_net.jpg"
+            image: ai_img
         },
         {
             title: "UI/UX Design",
             description: "Beautiful and functional user interfaces.",
-            image: "/images/wireframes_pic.jpg"
+            image: ui_img
         },
     ];
 

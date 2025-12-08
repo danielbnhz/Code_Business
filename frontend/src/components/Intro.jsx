@@ -1,4 +1,5 @@
 import React from "react";
+import server_img from "../images/servers.jpg";
 
 export default function Intro() {
     return (
@@ -34,7 +35,7 @@ export default function Intro() {
             {/* Right Section */}
             <div className="w-full h-full">
                 <img
-                    src="/images/servers.jpg"
+                    src={server_img}
                     alt="Photo of server room"
                     className="w-full h-full object-cover md:rounded-l-2xl shadow-lg"
                 />

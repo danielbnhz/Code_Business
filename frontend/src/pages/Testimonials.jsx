@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Disclaimer from "../components/Disclaimer";
 import PartnershipsHeader from "../components/PartnershipsHeader";
 import Divider from "../components/Divider"
+import fictional_companies from "../images/fictional_brands.png";
 
 const testimonials = [
   {
@@ -57,7 +58,7 @@ export default function Testimonials() {
       <PartnershipsHeader />
       <Divider />
       <img
-        src="/images/fictional_brands.png"
+        src={fictional_companies}
         alt="Logos of fictional companies"
         className="mx-auto w-460 h-400"
       />

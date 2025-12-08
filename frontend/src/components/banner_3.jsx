@@ -1,5 +1,5 @@
 import React from "react";
-
+import computer_user from "../images/banner_3.jpg";
 
 export default function Banner_3() {
     return (
@@ -14,7 +14,7 @@ export default function Banner_3() {
             {/* Banner image */}
             <div className="relative w-full h-[36rem]">
                 <img
-                    src="/images/banner_3.jpg"
+                    src={computer_user}
                     alt="person using webapp dashboard"
                     className="w-full h-full object-cover opacity-90"
                 />

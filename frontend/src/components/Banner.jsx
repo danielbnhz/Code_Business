@@ -1,5 +1,7 @@
 
 import React from "react";
+import banner_1 from "../images/code.jpg";
+
 export default function Banner() {
     return (
         <div id="banner-top" className="bg-black text-white w-full">
@@ -15,7 +17,7 @@ export default function Banner() {
             {/* Banner image */}
             <div className="relative w-full h-[36rem]">
                 <img
-                    src="/images/code.jpg"
+                    src={banner_1}
                     alt="highly condensed computer code"
                     className="w-full h-full object-cover opacity-90"
                 />
