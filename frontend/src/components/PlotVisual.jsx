@@ -4,7 +4,9 @@ import React from "react";
 
 function PlotVisual() {
   const [data, setData] = useState(null);
+  const [dimensions, setDimensions] = useState({ width: window.innerWidth * 0.9, height: 400 });
 
+  // Update plot data
   useEffect(() => {
     const interval = setInterval(() => {
       const API_BASE = import.meta.env.VITE_API_URL;
@@ -12,15 +14,28 @@ function PlotVisual() {
       fetch(`${API_BASE}/graph_data`)
         .then(res => res.json())
         .then(json => setData(json));
-    }, 250); // refresh every 250ms
+    }, 250);
 
     return () => clearInterval(interval);
   }, []);
 
-  if (!data) return <p>Loading...</p>;
+  // Update dimensions on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth * 0.9,  // 90% of window width
+        height: 400                       // fixed height or calculate dynamically if you want
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  if (!data) return <p className="text-white">Loading...</p>;
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div className="flex justify-center items-center">
       <Plot
         data={[{
           x: data.x,
@@ -35,15 +50,13 @@ function PlotVisual() {
           paper_bgcolor: 'black',
           xaxis: { color: 'white' },
           yaxis: { color: 'white' },
-          width: 1000,   // set a fixed width
-          height: 400,  // set a fixed height
+          width: dimensions.width,
+          height: dimensions.height,
           margin: { t: 20, b: 40, l: 50, r: 20 }
         }}
-          config={{ displayModeBar: false }}
-        
+        config={{ displayModeBar: false }}
       />
     </div>
-
   );
 }
 

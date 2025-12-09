@@ -57,11 +57,13 @@ export default function Testimonials() {
       {/* <div> */}
       <PartnershipsHeader />
       <Divider />
-      <img
-        src={fictional_companies}
-        alt="Logos of fictional companies"
-        className="mx-auto w-460 h-400"
-      />
+      <div className="px-4 sm:px-6">
+        <img
+          src={fictional_companies}
+          alt="Logos of fictional companies"
+          className="mx-auto w-full max-w-[460px] h-auto"
+        />
+      </div>
 
       {/* </div> */}
       
