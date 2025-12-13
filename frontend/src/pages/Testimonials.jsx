@@ -6,6 +6,7 @@ import Disclaimer from "../components/Disclaimer";
 import PartnershipsHeader from "../components/PartnershipsHeader";
 import Divider from "../components/Divider"
 import fictional_companies from "../images/fictional_brands.png";
+import SplitSection from "../components/SplitSection";
 
 const testimonials = [
   {
@@ -68,7 +69,7 @@ export default function Testimonials() {
       {/* </div> */}
       
 
-
+      <SplitSection />
       <Disclaimer />
 
       <Footer />

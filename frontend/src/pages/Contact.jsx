@@ -5,6 +5,7 @@ import ContactForm from "../components/ContactForm.jsx";
 import Disclaimer_2 from "../components/Disclaimer_2.jsx";
 import Divider from "../components/Divider.jsx";
 import email_img from "../images/EmailImage.jpg";
+import Banner_4 from "../components/Banner_4.jsx";
 
 export default function Contact() {
   return (
@@ -27,6 +28,7 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    <Banner_4 />
     <Divider />
     <Disclaimer_2 />
     <Divider />
