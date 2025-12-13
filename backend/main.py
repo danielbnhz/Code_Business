@@ -75,6 +75,10 @@ def graph_data():
 
     return {"x": [current_y], "y": [current_y]}
 
+@app.get("/speed")
+def get_speed():
+    speed = random.randint(0, 100)
+    return {"speed": speed}
 
 @app.on_event("shutdown")
 async def shutdown_event():

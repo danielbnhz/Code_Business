@@ -3,7 +3,7 @@ import computer_board from "../images/computer_board.jpg"
 
 const SplitSection = () => {
   return (
-    <div className="flex flex-col md:flex-row bg-[#222] text-cyan-400 h-[250px] md:h-[300px] overflow-hidden">
+    <div className="flex flex-col md:flex-row bg-gray-900 text-cyan-400 h-[250px] md:h-[300px] overflow-hidden">
       {/* Image on the left */}
       <div className="w-full md:w-1/2 aspect-square overflow-hidden">
         <img

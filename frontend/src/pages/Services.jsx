@@ -7,7 +7,9 @@ import Banner_3 from "../components/banner_3.jsx";
 import PlotVisual from "../components/PlotVisual.jsx"
 import BarGraph from "../components/BarGraph.jsx";
 import { useState, useEffect } from "react";
-
+import Speedometer from "../components/Speedometer.jsx";
+import DualImageSection from "../components/DualImageSection.jsx";
+import TextBufferSection from "../components/TextBufferSecction.jsx";
 
 const RANGES = {
   cpu_load: [0, 100],
@@ -48,7 +50,12 @@ export default function Services() {
       <BarGraph metricKey="memory_usage" value={metrics.memory_usage} ranges={RANGES}/>
       <BarGraph metricKey="disk_io" value={metrics.disk_io} ranges={RANGES}/>
       <BarGraph metricKey="network_speed" value={metrics.network_speed} ranges={RANGES}/>
-    </div>    
+    </div>
+    <div className="flex justify-center items-center w-full">
+    <Speedometer width={750} height={300}  />    
+    </div>
+    <TextBufferSection />
+    <DualImageSection />
     <Footer />
     </>
   );

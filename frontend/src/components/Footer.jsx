@@ -1,5 +1,7 @@
 import React from "react";
 import PrivacyModal from "./PrivacyModal"; // adjust path if needed
+import { FacebookIcon, InstagramIcon, TwitterIcon } from "./SocialMediaIcons";
+
 
 export default function Footer() {
   return (
@@ -8,7 +10,10 @@ export default function Footer() {
         <p className="m-0">&copy; 2025 Code Business</p>
       </div>
       <div className="flex gap-6 items-center">
-        {/* Replace the "Privacy" link with the modal trigger */}
+        {/* Footer links */}
+        <FacebookIcon className="hover:text-sky-500 transition-colors" />
+        <InstagramIcon className="hover:text-cyan-400 transition-colors" />
+        <TwitterIcon className="hover:text-sky-500 transition-colors" />
         <PrivacyModal />
 
         <a
